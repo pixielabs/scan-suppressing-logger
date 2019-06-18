@@ -1,5 +1,7 @@
 # ScanSuppressingLogger
 
+[![Gem Version](https://badge.fury.io/rb/scan-suppressing-logger.svg)](https://badge.fury.io/rb/scan-suppressing-logger)
+
 Rails middleware to suppress logging and exception reporting for certain IP
 addresses or IP address ranges. Useful if your application is the target of
 automated security scans (e.g. a scheduled penetration test) that fills your
