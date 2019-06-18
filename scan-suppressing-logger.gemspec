@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "scan-suppressing-logger"
   spec.version       = ScanSuppressingLogger::VERSION
   spec.authors       = ["David Somers"]
-  spec.email         = ["126989+jalada@users.noreply.github.com"]
+  spec.email         = ["team@pixielabs.io"]
 
   spec.summary       = %q{Suppress Rails logs and exceptions from automated scan requests.}
   spec.homepage      = "https://github.com/pixielabs/scan-suppressing-logger"
