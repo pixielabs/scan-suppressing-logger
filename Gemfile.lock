@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    scan-suppressing-logger (0.1.0.pre.alpha1)
+    scan-suppressing-logger (0.1.0.pre.alpha2)
       rails (>= 4.2)
 
 GEM
