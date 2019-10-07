@@ -50,7 +50,7 @@ If you get this error it might be because something else is replacing the
 standard logger, or expecting it to be there. For example, if you have
 `config.assets.quiet = true` in your configuration, Sprockets tries to
 `insert_before` the standard logging middleware in an initializer. You'll need
-to configure this gem in an initializer too:
+to configure this gem in an initializer instead:
 
 ```ruby
 # config/initializer/suppressing_logger.rb
