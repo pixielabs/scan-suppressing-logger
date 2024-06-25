@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: |
           gemfile_name=$(basename ${{ matrix.gemfile }} .gemfile)
-          bundle exec appraisal $gemfile_name rspec
+          bundle exec rspec
