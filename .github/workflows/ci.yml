@@ -21,5 +21,4 @@ jobs:
           bundle install --gemfile ${{ matrix.gemfile }}
       - name: Run tests
         run: |
-          bundle exec appraisal install
           bundle exec appraisal ${{ matrix.gemfile | split: '/' | last | split: '.' | first }} rspec
