@@ -1,16 +1,26 @@
 require "bundler/setup"
 require "rails"
+require "action_controller/railtie"
 require "scan_suppressing_logger"
 
-# Set up a dummy Rails app for testing
+# Setup a dummy Rails app
 module Dummy
   class Application < Rails::Application
     config.root = File.dirname(__FILE__)
-    config.eager_load = false
   end
 end
 
-Dummy::Application.initialize!
+# Impossible to do this in a test; so you only get one shot setting it up.
+Rails.application.configure do
+  config.middleware.swap Rails::Rack::Logger, ScanSuppressingLogger::Middleware, {
+    networks: ['127.0.0.1']
+  }
+
+  config.eager_load = false
+  config.hosts.clear
+end
+
+Rails.application.initialize!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

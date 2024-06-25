@@ -12,3 +12,5 @@
 
 # Created when initializing Rails app
 /spec/log
+/spec/tmp
+/log
