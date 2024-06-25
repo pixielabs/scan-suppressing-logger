@@ -21,5 +21,4 @@ jobs:
           bundle install --gemfile ${{ matrix.gemfile }}
       - name: Run tests
         run: |
-          gemfile_name=$(basename ${{ matrix.gemfile }} .gemfile)
-          bundle exec rspec
+          BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec rspec
