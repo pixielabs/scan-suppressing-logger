@@ -1,5 +1,16 @@
 require "bundler/setup"
+require "rails"
 require "scan_suppressing_logger"
+
+# Set up a dummy Rails app for testing
+module Dummy
+  class Application < Rails::Application
+    config.root = File.dirname(__FILE__)
+    config.eager_load = false
+  end
+end
+
+Dummy::Application.initialize!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
